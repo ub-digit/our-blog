@@ -1902,15 +1902,15 @@ h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #025da6;
   text-decoration: none;
   transition: color .5s ease;
 }
 a:visited {
-  color: #1756a9;
+  color: #01335a;
 }
 a:hover {
-  color: #6da4eb;
+  color: #0387f2;
   text-decoration: underline;
 }
 /**
@@ -2058,7 +2058,7 @@ ul.list-unstyled {
   color: #e8e8e8;
 }
 .site-header h1 .site-title:hover {
-  color: #2a7ae2;
+  color: #025da6;
 }
 @media screen and (min-width: 800px) {
   .site-header h1 {
@@ -2096,7 +2096,7 @@ ul.list-unstyled {
   color: #e8e8e8;
 }
 .site-header .site-nav a.page-link:hover {
-  color: #2a7ae2;
+  color: #025da6;
 }
 .site-header .social-nav {
   text-align: center;
