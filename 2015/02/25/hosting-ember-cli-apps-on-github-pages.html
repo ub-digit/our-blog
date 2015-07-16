@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Hur man hostar en ember-cli applikation på Github Pages</title>
-  <meta name="description" content="När du väljer att publicera dina sidor på Github Pages kommer url:n  att bli ">
+  <meta name="description" content="När du väljer att publicera dina sidor på Github Pages kommer url:n  att bli">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
@@ -69,11 +69,11 @@
   </header>
 
   <article class="post-content">
-    <p>När du väljer att publicera dina sidor på <a href="https://pages.github.com/">Github Pages</a> kommer url:n  att bli </p>
+    <p>När du väljer att publicera dina sidor på <a href="https://pages.github.com/">Github Pages</a> kommer url:n  att bli</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">http</span><span class="o">:</span><span class="c1">//yourusername.github.io/projectname</span></code></pre></div>
 
-<p>Eftersom ember-cli som default utgår från att den kör i rooten på domänen måste man ändra detta. Det gör man genom config/environment.js. </p>
+<p>Eftersom ember-cli som default utgår från att den kör i rooten på domänen måste man ändra detta. Det gör man genom config/environment.js.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">environment</span> <span class="o">===</span> <span class="s1">&#39;production&#39;</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">ENV</span><span class="p">.</span><span class="nx">baseURL</span> <span class="o">=</span> <span class="s1">&#39;/projectname&#39;</span>
@@ -81,7 +81,7 @@
 
 <p><strong>Publicera</strong></p>
 
-<p>När baseUrl nu är ändrad kan vi bygga applikationen och publicera den. Github Pages kräver att siten ligger i en branch som heter “gh-pages”. För att bygga, skapa den nya branchen och publicera siten kan man använda följande skript. </p>
+<p>När baseUrl nu är ändrad kan vi bygga applikationen och publicera den. Github Pages kräver att siten ligger i en branch som heter “gh-pages”. För att bygga, skapa den nya branchen och publicera siten kan man använda följande skript.</p>
 
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">// publishToGithubPages.sh
 <span class="c">#!/bin/bash</span>
