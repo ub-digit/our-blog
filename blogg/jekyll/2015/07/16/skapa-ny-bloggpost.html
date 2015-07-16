@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>En genomgång av hur man skapar en ny bloggpost</title>
+  <meta name="description" content="För att skapa en bloggpost:">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/our-blog/css/production.css">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/blogg/jekyll/2015/07/16/skapa-ny-bloggpost.html">
+  <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
+
+  
+  <link rel="icon" href="/our-blog/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/our-blog/"><div class="profile-image">
+      <img src="/our-blog/assets/images/logo.jpg">
+    </div></a>
+    
+    <h1><a class="site-title" href="/our-blog/">Utvecklarbloggen</a></h1>
+
+    <nav class="site-nav">
+
+        <ul class="list-unstyled">
+        
+          
+          <li><a class="page-link" href="/our-blog/om-oss/">Om oss</a></li>
+          
+        
+          
+        
+          
+        
+        </ul>
+    </nav>
+
+    <nav class="social-nav">
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/ub-digit"><i class="fa fa-github"></i></a></li>
+        <li><a href="/our-blog/feed.xml"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">En genomgång av hur man skapar en ny bloggpost</h1>
+    <p class="post-meta">Jul 16, 2015 • Jimmy Carlsson</p>
+  </header>
+
+  <article class="post-content">
+    <p>För att skapa en bloggpost:</p>
+
+<hr />
+
+<h2 id="frsta-gngen">Första gången</h2>
+
+<h3 id="installera-jekylls-gem">Installera jekylls gem</h3>
+<p><code>
+gem install jekyll
+</code></p>
+
+<h3 id="klona-repositoriet">Klona repositoriet</h3>
+<p><code>
+git clone git@github.com:ub-digit/our-blog.git
+</code></p>
+
+<h3 id="kr-bloggen-lokalt">Kör bloggen lokalt</h3>
+
+<p><code>
+jekyll serve
+</code></p>
+
+<p>Kommandot startar bloggen lokalt på http://localhost:4000/our-blog/ , sparade ändringar i poster visas efter refresh.</p>
+
+<hr />
+
+<h2 id="skapa-en-post">Skapa en post</h2>
+
+<h3 id="kopiera-exempelpost">Kopiera exempelpost</h3>
+<p>En färdig exempelpost finns skapad som <code>_posts/exempelpost</code></p>
+
+<p><code>
+cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
+</code></p>
+
+<h3 id="byt-ut-postspecifk-data-i-filens-inledning">Byt ut postspecifk data i filens inledning:</h3>
+
+<ul>
+  <li>title</li>
+  <li>date</li>
+  <li>author</li>
+  <li>categories</li>
+</ul>
+
+<h3 id="skriv-bloggpostens-innehll">Skriv bloggpostens innehåll</h3>
+<p>Förutsatt att du sparat filen som .markdown eller .md används <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown-syntax</a></p>
+
+<h3 id="commit-post-till-master">Commit post till master</h3>
+<p>Commita samtliga ändringar till master och pusha.</p>
+
+<h3 id="deploya-ny-blogg">Deploya ny blogg</h3>
+<p>För att bloggen ska uppdateras, kör kommandot <code>make deploy</code></p>
+
+<p>Makeskriptet genererar då om bloggen i sin helhet och sparar statiska filer i _site/ mappen.</p>
+
+<h3 id="klar">Klar!</h3>
+
+<p>Kolla in http://ub-digit.github.io/our-blog/ så att allt ser bra ut.</p>
+
+<hr />
+
+<h2 id="jekyll-dokumentation">Jekyll dokumentation</h2>
+
+<p>http://jekyllrb.com</p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Utvecklarbloggen</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Utvecklarbloggen</li>
+          <li><a href="mailto:itutvecklare@ub.gu.se">itutvecklare@ub.gu.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Ett anteckningsblock för utvecklarteamet vid Göteborgs Universitetsbibliotek. Här finns tips och tricks, länkar och annat som vi behöver ha snabb tillgång till.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
