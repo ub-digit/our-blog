@@ -1,25 +1,17 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-07-15 14:31:04
-categories: jekyll update
+title:  "En bra 'walkthrough' för att installera en lokal utvecklarmiljö med Apache, MySQL, PHP, och virtual hosts på Mac (Yosemite)"
+date:   2015-07-16 12:00
+author: Johan Larsson
+categories: Apache MySql PHP Homebrew
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Ett av dom stora problemen jag stött på just när man använder virtual hosts är att man inte kan testa på externa enheter som iPhones, iPads etc. I artikeln nedan löses detta genom ett verktyg som heter [som heter dnsmasq][dnsmasq]
 
-Jekyll also offers powerful support for code snippets:
+Du hittar den [här][medium]. 
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Rekomenderas! 
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+[medium]:      https://medium.com/@raureif/os-x-yosemite-how-to-set-up-apache-mysql-and-php-with-homebrew-4bc236d7d9fa
+[dnsmasq]: http://www.thekelleys.org.uk/dnsmasq/doc.html
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
