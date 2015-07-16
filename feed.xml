@@ -1,40 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>Utvecklarbloggen</title>
+    <description>Ett anteckningsblock för utvecklarteamet vid Göteborgs Universitetsbibliotek. Här finns tips och tricks, länkar och annat som vi behöver ha snabb tillgång till.
 </description>
-    <link>http://yourdomain.com/our-blog/</link>
-    <atom:link href="http://yourdomain.com/our-blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jul 2015 15:45:39 +0200</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2015 15:45:39 +0200</lastBuildDate>
+    <link>http://ub.gu.se/our-blog/</link>
+    <atom:link href="http://ub.gu.se/our-blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 16 Jul 2015 12:24:17 +0200</pubDate>
+    <lastBuildDate>Thu, 16 Jul 2015 12:24:17 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>En bra &#39;walkthrough&#39; för att installera en lokal utvecklarmiljö med Apache, MySQL, PHP, och virtual hosts på Mac (Yosemite)</title>
+        <description>&lt;p&gt;Ett av dom stora problemen jag stött på just när man använder virtual hosts är att man inte kan testa på externa enheter som iPhones, iPads etc. I artikeln nedan löses detta genom ett verktyg som heter &lt;a href=&quot;http://www.thekelleys.org.uk/dnsmasq/doc.html&quot;&gt;som heter dnsmasq&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Du hittar den &lt;a href=&quot;https://medium.com/@raureif/os-x-yosemite-how-to-set-up-apache-mysql-and-php-with-homebrew-4bc236d7d9fa&quot;&gt;här&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rekomenderas! &lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 15 Jul 2015 16:31:04 +0200</pubDate>
-        <link>http://yourdomain.com/our-blog/jekyll/update/2015/07/15/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/our-blog/jekyll/update/2015/07/15/welcome-to-jekyll.html</guid>
+        <pubDate>Thu, 16 Jul 2015 12:00:00 +0200</pubDate>
+        <link>http://ub.gu.se/our-blog/apache/mysql/php/homebrew/2015/07/16/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/apache/mysql/php/homebrew/2015/07/16/welcome-to-jekyll.html</guid>
         
         
-        <category>jekyll</category>
+        <category>apache</category>
         
-        <category>update</category>
+        <category>mysql</category>
+        
+        <category>php</category>
+        
+        <category>homebrew</category>
+        
+      </item>
+    
+      <item>
+        <title>En liten &#39;setting&#39; för att få en Ember-cli app att köra embeddad</title>
+        <description>&lt;p&gt;Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden. &lt;/p&gt;
+
+&lt;p&gt;Lägg till detta i Brocfile.js&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;EmberApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+	  &lt;span class=&quot;nx&quot;&gt;storeConfigInMeta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	   &lt;span class=&quot;nx&quot;&gt;fingerprint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;css&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan. &lt;/p&gt;
+
+&lt;p&gt;Tillgängligt från ember-cli 0.1.2 &lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Apr 2015 20:05:00 +0200</pubDate>
+        <link>http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html</guid>
+        
+        
+        <category>ember-cli</category>
+        
+        <category>konfiguration</category>
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>Hur man hostar en ember-cli applikation på Github Pages</title>
+        <description>&lt;p&gt;När du väljer att publicera dina sidor på &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; kommer url:n  att bli &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//yourusername.github.io/projectname&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Eftersom ember-cli som default utgår från att den kör i rooten på domänen måste man ändra detta. Det gör man genom config/environment.js. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;production&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;baseURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/projectname&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Publicera&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;När baseUrl nu är ändrad kan vi bygga applikationen och publicera den. Github Pages kräver att siten ligger i en branch som heter “gh-pages”. För att bygga, skapa den nya branchen och publicera siten kan man använda följande skript. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// publishToGithubPages.sh
+&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+git branch -D gh-pages
+git push origin --delete gh-pages
+git checkout -b gh-pages
+ember build --environment production
+git rm -rf app addon config tests
+git rm -rf Brocfile.js bower.json package.json testem.json
+git rm -rf .bowerrc .editorconfig .jshintrc .travis.yml
+mv dist/* .
+rm -rf dist
+git add .
+git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Publishing to github pages&amp;quot;&lt;/span&gt;
+git push origin gh-pages
+git checkout master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://xcv.no/2014/11/29/Deploying-ember-cli-apps-and-addons-to-github-pages.html&quot;&gt;Jag hittade informationen om detta här&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Feb 2015 21:05:00 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/2015/02/25/hosting-ember-cli-apps-on-github-pages.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/2015/02/25/hosting-ember-cli-apps-on-github-pages.html</guid>
+        
+        <category>Ember-cli</category>
+        
+        <category>Github</category>
+        
+        <category>Github-pages</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Lägg till Bootstrap Less i Ember CLI</title>
+        <description>&lt;p&gt;Ember-cli har support för LESS kompilering om du installerar ett addon som heter Ember-cli-less. By default kommer alla filer som ligger i styles katalogen slås ihop och kompileras till en fil om dom har en .less extension. Detta gör det mycket smidigt att komma igång med LESS och Bootstrap i ett projekt. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steg 1 - installera ember-cli-less&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ember&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cli&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Steg 2 - installera bootstrap med bower&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;bower&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;bootstrap&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Du kommer nu ha en katalog som heter bootstrap i bower_components. I den folder hittar du hela bootstrappakektet. Det som är intressant just nu är såklart less-katalogen. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steg 3 - länka in bootstrap.less i din app&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Detta gör jag genom att byta namn på filen som i ett initialt Ember-cli projekt heter app.css och ligger i styles-katalogen. Det nya namnet blir app.less. Sen tömmer jag den på det lilla innehåll som finns där i. &lt;/p&gt;
+
+&lt;p&gt;Sedan lägger jag dit följande rad&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;bower_components/bootstrap/less/bootstrap.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Detta gör nu att bootstrap finns inlänkat i ditt projekt. Du kan sen skapa egna .less filer och länka in i denna filen. Det gör du direkt i styles-katalogen. Jag brukar alltid börja med header.less, footer.less och sen ser man vart man hamlar allt eftersom.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 11 Feb 2015 14:05:00 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/ember-cli/bootstrap/2015/02/11/add-bootstrap-less-to-ember-cli.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/bootstrap/2015/02/11/add-bootstrap-less-to-ember-cli.html</guid>
+        
+        
+        <category>ember-cli</category>
+        
+        <category>bootstrap</category>
+        
+      </item>
+    
+      <item>
+        <title>Strategi för att uppgradera ett Ember-cli projekt</title>
+        <description>&lt;p&gt;Hittade en tråd på discuss.ember.js som beskrev en bra strategi för att uppgradera en Ember-cli applikation. Ibland måste man. Senaste version är just nu 0.1.9. &lt;/p&gt;
+
+&lt;p&gt;Ember-cli beskriver hur man göra &lt;a href=&quot;http://www.ember-cli.com/#upgrading&quot;&gt;här&lt;/a&gt; men läs diskussion för strategin. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://discuss.emberjs.com/t/ember-cli-upgrade-process/6298&quot;&gt;ember cli tråden hittar du här&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Jan 2015 21:05:00 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/ember-cli/ember/2015/01/24/upgrading-ember-cli.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/ember/2015/01/24/upgrading-ember-cli.html</guid>
+        
+        
+        <category>ember-cli</category>
+        
+        <category>ember</category>
+        
+      </item>
+    
+      <item>
+        <title>Blanda procent och pixlar - border-box</title>
+        <description>&lt;p&gt;Detta får jag alltid googla upp och jag hamlar alltid på &lt;a href=&quot;http://www.paulirish.com/2012/box-sizing-border-box-ftw/&quot;&gt;Paul Irish post&lt;/a&gt;. Men ibland glömmer jag hur jag skall googla det. Så därför kommer snippeten nedan. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* apply a natural box layout model to all elements, but allowing components to change */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inherit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Läs mer om detta på &lt;a href=&quot;http://www.paulirish.com/2012/box-sizing-border-box-ftw/&quot;&gt;Paul Irish blogg&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Jan 2015 16:12:01 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/css/2015/01/19/box-sizing-border-box.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/css/2015/01/19/box-sizing-border-box.html</guid>
+        
+        
+        <category>css</category>
+        
+      </item>
+    
+      <item>
+        <title>Animationer på ett enkelt sätt i Ember!</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/ef4/liquid-fire&quot;&gt;Liquid-fire&lt;/a&gt; är ett “addon” till &lt;a href=&quot;http://www.ember-cli.com/&quot;&gt;Ember CLI&lt;/a&gt; och det är det  absolut enklaste och snabbaste sättet att få till animationer i en Ember CLI applikation. Det funkar även med &lt;a href=&quot;http://getbootstrap.com/css/#grid&quot;&gt;bootstraps-grid&lt;/a&gt;. Man kan också skriva sina egna animationer om man vill.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Liquid Fire is a toolkit for managing animated transitions in an Ember application. Like Ember itself, our goal is to cultivate shared abstractions so we’re free to focus on bigger and better ideas. Good defaults. Convention over configuration. Composable pieces all the way down. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;installera&quot;&gt;1: Installera&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fire&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;skapa-en-ny-outlet-som-skall-animeras&quot;&gt;2: Skapa en ny outlet som skall animeras&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{liquid-outlet}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;skapa-en-transition-map&quot;&gt;3: Skapa en Transition Map&lt;/h2&gt;
+
+&lt;p&gt;Det gör du genom att skapa följande fil &lt;em&gt;app/transitions.js&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;Eftersom animationerna kan variera baserat på vilken rutt man går från och till så kan man här ange “fromRoute” och “toRoute”. Baserat på det kan man då välja animationstyp. T ex om man går djupare ner i en struktur vill man animera från höger till vänster men när man går tillbaka vill man oftast göra det omvända. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fromRoute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toRoute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;toLeft&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+	  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;toRight&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Full dokumentation för &lt;a href=&quot;http://ef4.github.io/liquid-fire/&quot;&gt;liquid-fire&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 19 Jan 2015 16:12:01 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/ember/javascript/2015/01/19/animations-in-ember-cli.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember/javascript/2015/01/19/animations-in-ember-cli.html</guid>
+        
+        
+        <category>ember</category>
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS transitions triggar på första laddningen.</title>
+        <description>&lt;p&gt;&lt;strong&gt;Uppgift:&lt;/strong&gt; Animera “color-attributet” på hover på länkar bara efter page-load. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.5s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt; Det problem jag stötte på var att länkarna animerade från sitt ursprunliga tillstånd som browsern hade stylat dom med. Detta var inte önskvärt då besökta länkar är lila som default. Detta gjorde att länkarna gick från lila till den färg som jag valt vid första laddningen. Vidrigt och fult. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lösning:&lt;/strong&gt; Lägg till en class på body elementet som heter “preload” och stäng ner alla animationer på allt om den är närvarande.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;preload&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Stäng ner alla animationer om preload finns närvarande. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.preload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Glöm sen inte att ta bort classen från body när första laddningen är klar. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ready&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;preload&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Detta kommer från &lt;a href=&quot;http://css-tricks.com/transitions-only-after-page-load/&quot;&gt;css-tricks&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 09 Jan 2015 20:05:00 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/css/animation/javascript/2015/01/09/css-transition-first-load.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/css/animation/javascript/2015/01/09/css-transition-first-load.html</guid>
+        
+        
+        <category>css</category>
+        
+        <category>animation</category>
+        
+        <category>javascript</category>
         
       </item>
     

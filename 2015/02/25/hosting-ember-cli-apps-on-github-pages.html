@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hur man hostar en ember-cli applikation på Github Pages</title>
+  <meta name="description" content="När du väljer att publicera dina sidor på Github Pages kommer url:n  att bli ">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/our-blog/css/production.css">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/2015/02/25/hosting-ember-cli-apps-on-github-pages.html">
+  <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
+
+  
+  <link rel="icon" href="/our-blog/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/our-blog/"><div class="profile-image">
+      <img src="/our-blog/assets/images/logo.jpg">
+    </div></a>
+    
+    <h1><a class="site-title" href="/our-blog/">Utvecklarbloggen</a></h1>
+
+    <nav class="site-nav">
+
+        <ul class="list-unstyled">
+        
+          
+          <li><a class="page-link" href="/our-blog/om-oss/">Om oss</a></li>
+          
+        
+          
+        
+          
+        
+        </ul>
+    </nav>
+
+    <nav class="social-nav">
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/ub-digit"><i class="fa fa-github"></i></a></li>
+        <li><a href="/our-blog/feed.xml"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Hur man hostar en ember-cli applikation på Github Pages</h1>
+    <p class="post-meta">Feb 25, 2015 • Johan Larsson</p>
+  </header>
+
+  <article class="post-content">
+    <p>När du väljer att publicera dina sidor på <a href="https://pages.github.com/">Github Pages</a> kommer url:n  att bli </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">http</span><span class="o">:</span><span class="c1">//yourusername.github.io/projectname</span></code></pre></div>
+
+<p>Eftersom ember-cli som default utgår från att den kör i rooten på domänen måste man ändra detta. Det gör man genom config/environment.js. </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">environment</span> <span class="o">===</span> <span class="s1">&#39;production&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">ENV</span><span class="p">.</span><span class="nx">baseURL</span> <span class="o">=</span> <span class="s1">&#39;/projectname&#39;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>Publicera</strong></p>
+
+<p>När baseUrl nu är ändrad kan vi bygga applikationen och publicera den. Github Pages kräver att siten ligger i en branch som heter “gh-pages”. För att bygga, skapa den nya branchen och publicera siten kan man använda följande skript. </p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">// publishToGithubPages.sh
+<span class="c">#!/bin/bash</span>
+git branch -D gh-pages
+git push origin --delete gh-pages
+git checkout -b gh-pages
+ember build --environment production
+git rm -rf app addon config tests
+git rm -rf Brocfile.js bower.json package.json testem.json
+git rm -rf .bowerrc .editorconfig .jshintrc .travis.yml
+mv dist/* .
+rm -rf dist
+git add .
+git commit -m <span class="s2">&quot;Publishing to github pages&quot;</span>
+git push origin gh-pages
+git checkout master</code></pre></div>
+
+<p><a href="http://xcv.no/2014/11/29/Deploying-ember-cli-apps-and-addons-to-github-pages.html">Jag hittade informationen om detta här</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Utvecklarbloggen</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Utvecklarbloggen</li>
+          <li><a href="mailto:itutvecklare@ub.gu.se">itutvecklare@ub.gu.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Ett anteckningsblock för utvecklarteamet vid Göteborgs Universitetsbibliotek. Här finns tips och tricks, länkar och annat som vi behöver ha snabb tillgång till.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

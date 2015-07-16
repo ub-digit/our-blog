@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CSS transitions triggar på första laddningen.</title>
+  <meta name="description" content="Uppgift: Animera “color-attributet” på hover på länkar bara efter page-load. ">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/our-blog/css/production.css">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/css/animation/javascript/2015/01/09/css-transition-first-load.html">
+  <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
+
+  
+  <link rel="icon" href="/our-blog/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/our-blog/"><div class="profile-image">
+      <img src="/our-blog/assets/images/logo.jpg">
+    </div></a>
+    
+    <h1><a class="site-title" href="/our-blog/">Utvecklarbloggen</a></h1>
+
+    <nav class="site-nav">
+
+        <ul class="list-unstyled">
+        
+          
+          <li><a class="page-link" href="/our-blog/om-oss/">Om oss</a></li>
+          
+        
+          
+        
+          
+        
+        </ul>
+    </nav>
+
+    <nav class="social-nav">
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/ub-digit"><i class="fa fa-github"></i></a></li>
+        <li><a href="/our-blog/feed.xml"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">CSS transitions triggar på första laddningen.</h1>
+    <p class="post-meta">Jan 9, 2015 • Johan Larsson</p>
+  </header>
+
+  <article class="post-content">
+    <p><strong>Uppgift:</strong> Animera “color-attributet” på hover på länkar bara efter page-load. </p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">a</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">:</span> <span class="k">color</span> <span class="m">.5s</span> <span class="n">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+        <span class="k">color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>Problem:</strong> Det problem jag stötte på var att länkarna animerade från sitt ursprunliga tillstånd som browsern hade stylat dom med. Detta var inte önskvärt då besökta länkar är lila som default. Detta gjorde att länkarna gick från lila till den färg som jag valt vid första laddningen. Vidrigt och fult. </p>
+
+<p><strong>Lösning:</strong> Lägg till en class på body elementet som heter “preload” och stäng ner alla animationer på allt om den är närvarande.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;preload&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<p>Stäng ner alla animationer om preload finns närvarande. </p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.preload</span> <span class="o">*</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Glöm sen inte att ta bort classen från body när första laddningen är klar. </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">().</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  	<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;preload&quot;</span><span class="p">);</span>
+<span class="p">});</span></code></pre></div>
+
+<p>Detta kommer från <a href="http://css-tricks.com/transitions-only-after-page-load/">css-tricks</a></p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Utvecklarbloggen</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Utvecklarbloggen</li>
+          <li><a href="mailto:itutvecklare@ub.gu.se">itutvecklare@ub.gu.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Ett anteckningsblock för utvecklarteamet vid Göteborgs Universitetsbibliotek. Här finns tips och tricks, länkar och annat som vi behöver ha snabb tillgång till.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
