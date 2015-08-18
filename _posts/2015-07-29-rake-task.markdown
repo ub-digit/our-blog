@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Att skapa och använda rake task "
+date:   2015-07-29 17:40
+author: Per Larsson
+categories: Rails Rake Task Skript Crontab
+---
+
+Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.
+
+
+## Skapa en task
+```
+rails generate task <namespace> <task1> <task2>
+```
+
+Exempel
+
+```
+rails generate task libris_info neg_responses user_requests
+```
+
+Följande fil skapas: 
+```
+lib/tasks/libris_info.rake
+```
+
+{% highlight ruby %}
+namespace :libris_info do
+  desc "beskrivning av libris_info task"  
+  task neg_responses: :environment do
+    ## Skriv kod
+  end
+
+  desc "beskrivning av user_requests task"  
+  task user_requests: :environment do
+    ## Skriv kod
+  end
+end
+{% endhighlight %}
+
+
+
+
+En task anropas sedan via t.ex.
+
+```
+RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
+```
+
