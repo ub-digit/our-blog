@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Att skapa och använda rake task </title>
+  <meta name="description" content="Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/our-blog/css/production.css">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/rails/rake/task/skript/crontab/2015/07/29/rake-task.html">
+  <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
+
+  
+  <link rel="icon" href="/our-blog/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/our-blog/"><div class="profile-image">
+      <img src="/our-blog/assets/images/logo.jpg">
+    </div></a>
+    
+    <h1><a class="site-title" href="/our-blog/">Utvecklarbloggen</a></h1>
+
+    <nav class="site-nav">
+
+        <ul class="list-unstyled">
+        
+          
+          <li><a class="page-link" href="/our-blog/om-oss/">Om oss</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a class="page-link" href="/our-blog/links/">Länkar</a></li>
+          
+        
+        </ul>
+    </nav>
+
+    <nav class="social-nav">
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/ub-digit"><i class="fa fa-github"></i></a></li>
+        <li><a href="/our-blog/feed.xml"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Att skapa och använda rake task </h1>
+    <p class="post-meta">Jul 29, 2015 • Per Larsson</p>
+  </header>
+
+  <article class="post-content">
+    <p>Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.</p>
+
+<h2 id="skapa-en-task">Skapa en task</h2>
+<p><code>
+rails generate task &lt;namespace&gt; &lt;task1&gt; &lt;task2&gt;
+</code></p>
+
+<p>Exempel</p>
+
+<p><code>
+rails generate task libris_info neg_responses user_requests
+</code></p>
+
+<p>Följande fil skapas: 
+<code>
+lib/tasks/libris_info.rake
+</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">namespace</span> <span class="ss">:libris_info</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">&quot;beskrivning av libris_info task&quot;</span>  
+  <span class="n">task</span> <span class="ss">neg_responses</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+    <span class="c1">## Skriv kod</span>
+  <span class="k">end</span>
+
+  <span class="n">desc</span> <span class="s2">&quot;beskrivning av user_requests task&quot;</span>  
+  <span class="n">task</span> <span class="ss">user_requests</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+    <span class="c1">## Skriv kod</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>En task anropas sedan via t.ex.</p>
+
+<p><code>
+RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
+</code></p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Utvecklarbloggen</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Utvecklarbloggen</li>
+          <li><a href="mailto:itutvecklare@ub.gu.se">itutvecklare@ub.gu.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Ett anteckningsblock för utvecklarteamet vid Göteborgs Universitetsbibliotek. Här finns tips och tricks, länkar och annat som vi behöver ha snabb tillgång till.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
