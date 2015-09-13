@@ -73,19 +73,19 @@
   </header>
 
   <article class="post-content">
-    <p>Här hittar du några copy-paste-kommandon för att ladda ner och installera Drupal. Observera att du måste ha Drush installerad på din maskin. Du måste också såklart ha en MySql-tjänst (mariadb i mitt fall), PHP samt Apache (eller annan webserver). </p>
+    <p>Här hittar du några copy-paste-kommandon för att ladda ner och installera Drupal. Observera att du måste ha Drush installerad på din maskin. Du måste också såklart ha en MySql-tjänst (mariadb i mitt fall), PHP samt Apache (eller annan webserver).</p>
 
-<p><strong>Ladda ner önskad version av Drupal</strong> </p>
+<p><strong>Ladda ner önskad version av Drupal</strong></p>
 
-<p>Om du inte anger någon version tar den senaste stabila version som finns tillgänglig. Skriv då bara <em>drush dl</em>. </p>
+<p>Om du inte anger någon version tar den senaste stabila version som finns tillgänglig. Skriv då bara <em>drush dl</em>.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">drush</span> <span class="nx">dl</span> <span class="nx">drupal</span><span class="o">-</span><span class="mi">7</span><span class="p">.</span><span class="nx">x</span></code></pre></div>
 
-<p><strong>Installera Drupal</strong> </p>
+<p><strong>Installera Drupal</strong></p>
 
-<p>Om du inte redan har skapat databasen så kommer Drush göra detta åt dig. </p>
+<p>Om du inte redan har skapat databasen så kommer Drush göra detta åt dig.</p>
 
-<p>Den första parametern är vilken installationsprofil du vill använda. Om du inte har någon egen rekomenderar jag <em>standard</em> men du kan också välja <em>minimal</em>. </p>
+<p>Den första parametern är vilken installationsprofil du vill använda. Om du inte har någon egen rekomenderar jag <em>standard</em> men du kan också välja <em>minimal</em>.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">drush</span> <span class="nx">site</span><span class="o">-</span><span class="nx">install</span> <span class="nx">standard</span> <span class="o">--</span><span class="nx">account</span><span class="o">-</span><span class="nx">name</span><span class="o">=</span><span class="nx">admin</span> <span class="o">--</span><span class="nx">account</span><span class="o">-</span><span class="nx">pass</span><span class="o">=</span><span class="nx">admin</span> <span class="o">--</span><span class="nx">db</span><span class="o">-</span><span class="nx">url</span><span class="o">=</span><span class="nx">mysql</span><span class="o">:</span><span class="c1">//root:RandomPassword@localhost/databasename</span></code></pre></div>
 
