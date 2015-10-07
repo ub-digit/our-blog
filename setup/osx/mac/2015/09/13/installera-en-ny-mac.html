@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>En liten 'setting' för att få en Ember-cli app att köra embeddad</title>
-  <meta name="description" content="Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embe...">
+  <title>Mac OS X Setup Guide</title>
+  <meta name="description" content="Installerade nyss en ny macbook och hittade en bra Gitbook som stöd.">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="/our-blog/css/production.css">
-  <link rel="canonical" href="http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/setup/osx/mac/2015/09/13/installera-en-ny-mac.html">
   <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
 
   
@@ -68,25 +68,18 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">En liten 'setting' för att få en Ember-cli app att köra embeddad</h1>
-    <p class="post-meta">Apr 27, 2015 • Johan Larsson</p>
+    <h1 class="post-title">Mac OS X Setup Guide</h1>
+    <p class="post-meta">Sep 13, 2015 • Johan Larsson</p>
   </header>
 
   <article class="post-content">
-    <p>Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden.</p>
+    <p>Installerade nyss en ny macbook och hittade en bra Gitbook som stöd.</p>
 
-<p>Lägg till detta i Brocfile.js</p>
+<blockquote>
+  <p>This book covers the basics of setting up a development environment on a new MacBook for most major languages. All instructions covered have been tested on Mountain Lion and Mavericks, but they might be more inclined towards Mavericks. Whether you are an experienced programmer or not, this book is intended for everyone to use as a reference when installing some languages/libraries.</p>
+</blockquote>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EmberApp</span><span class="p">({</span>
-	  <span class="nx">storeConfigInMeta</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	   <span class="nx">fingerprint</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">exclude</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">]</span>
-    	<span class="p">}</span>
-<span class="p">});</span></code></pre></div>
-
-<p>URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan.</p>
-
-<p>Tillgängligt från ember-cli 0.1.2</p>
+<p><a href="http://sourabhbajaj.com/mac-setup/index.html">Mac OS X Setup Guide</a></p>
 
   </article>
 

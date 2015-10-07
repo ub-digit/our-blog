@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>En liten 'setting' för att få en Ember-cli app att köra embeddad</title>
-  <meta name="description" content="Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embe...">
+  <title>Att skapa och använda rake task </title>
+  <meta name="description" content="Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="/our-blog/css/production.css">
-  <link rel="canonical" href="http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/rails/rake/task/skript/crontab/2015/07/29/rake-task.html">
   <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
 
   
@@ -68,25 +68,47 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">En liten 'setting' för att få en Ember-cli app att köra embeddad</h1>
-    <p class="post-meta">Apr 27, 2015 • Johan Larsson</p>
+    <h1 class="post-title">Att skapa och använda rake task </h1>
+    <p class="post-meta">Jul 29, 2015 • Per Larsson</p>
   </header>
 
   <article class="post-content">
-    <p>Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden.</p>
+    <p>Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.</p>
 
-<p>Lägg till detta i Brocfile.js</p>
+<h2 id="skapa-en-task">Skapa en task</h2>
+<p><code>
+rails generate task &lt;namespace&gt; &lt;task1&gt; &lt;task2&gt;
+</code></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EmberApp</span><span class="p">({</span>
-	  <span class="nx">storeConfigInMeta</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	   <span class="nx">fingerprint</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">exclude</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">]</span>
-    	<span class="p">}</span>
-<span class="p">});</span></code></pre></div>
+<p>Exempel</p>
 
-<p>URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan.</p>
+<p><code>
+rails generate task libris_info neg_responses user_requests
+</code></p>
 
-<p>Tillgängligt från ember-cli 0.1.2</p>
+<p>Följande fil skapas: 
+<code>
+lib/tasks/libris_info.rake
+</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">namespace</span> <span class="ss">:libris_info</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">&quot;beskrivning av libris_info task&quot;</span>  
+  <span class="n">task</span> <span class="ss">neg_responses</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+    <span class="c1">## Skriv kod</span>
+  <span class="k">end</span>
+
+  <span class="n">desc</span> <span class="s2">&quot;beskrivning av user_requests task&quot;</span>  
+  <span class="n">task</span> <span class="ss">user_requests</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+    <span class="c1">## Skriv kod</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>En task anropas sedan via t.ex.</p>
+
+<p><code>
+RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
+</code></p>
+
 
   </article>
 

@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>En liten 'setting' för att få en Ember-cli app att köra embeddad</title>
-  <meta name="description" content="Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embe...">
+  <title>Ember-xselect istället för Ember.select</title>
+  <meta name="description" content="Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers ‘Ember.select’ och ‘view ‘select’‘, så bör dessa bytas ut mot antingen en r...">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="/our-blog/css/production.css">
-  <link rel="canonical" href="http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/ember/select/2015/10/07/ember-xselect.html">
   <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
 
   
@@ -68,25 +68,41 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">En liten 'setting' för att få en Ember-cli app att köra embeddad</h1>
-    <p class="post-meta">Apr 27, 2015 • Johan Larsson</p>
+    <h1 class="post-title">Ember-xselect istället för Ember.select</h1>
+    <p class="post-meta">Oct 7, 2015 • Jimmy Carlsson</p>
   </header>
 
   <article class="post-content">
-    <p>Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden.</p>
+    <p>Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers <strong>‘Ember.select’</strong> och <strong>‘view ‘select’‘</strong>, så bör dessa bytas ut mot antingen en ren <code>&lt;select&gt;</code> tag mha HTMLBars, eller via ett add-on.</p>
 
-<p>Lägg till detta i Brocfile.js</p>
+<p>Jag har testat <strong>emberx-select</strong>, vilket är ett populärt addon som verkar fungera bra.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EmberApp</span><span class="p">({</span>
-	  <span class="nx">storeConfigInMeta</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	   <span class="nx">fingerprint</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">exclude</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">]</span>
-    	<span class="p">}</span>
-<span class="p">});</span></code></pre></div>
+<p>För att installera:</p>
 
-<p>URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan.</p>
+<pre><code>ember install emberx-select
+</code></pre>
 
-<p>Tillgängligt från ember-cli 0.1.2</p>
+<p>Kod innan byte:</p>
+
+<pre><code>{{view Ember.Select 
+  content=pubyears  
+  optionValuePath="content.id"
+  optionLabelPath="content.pubyear"
+  value=pubyear
+  class="form-control"
+}}
+</code></pre>
+
+<p>Kod efter byte</p>
+
+<pre><code>{{#x-select value=pubyear class="form-control"}}
+  {{#each pubyears as |selectValue|}}
+    {{#x-option value=selectValue.id}}{{selectValue.pubyear}}{{/x-option}}
+  {{/each}}
+{{/x-select}}
+</code></pre>
+
+<p>Länk till repositoriet: <a href="https://github.com/thefrontside/emberx-select">https://github.com/thefrontside/emberx-select</a></p>
 
   </article>
 

@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>En liten 'setting' för att få en Ember-cli app att köra embeddad</title>
-  <meta name="description" content="Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embe...">
+  <title>Installera Drupal 7 mha Drush</title>
+  <meta name="description" content="Här hittar du några copy-paste-kommandon för att ladda ner och installera Drupal. Observera att du måste ha Drush installerad på din maskin. Du måste också s...">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="/our-blog/css/production.css">
-  <link rel="canonical" href="http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html">
+  <link rel="canonical" href="http://ub.gu.se/our-blog/drupal/2015/08/18/install-drupal7-with-drush.html">
   <link rel="alternate" type="application/rss+xml" title="Utvecklarbloggen" href="http://ub.gu.se/our-blog/feed.xml" />
 
   
@@ -68,25 +68,27 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">En liten 'setting' för att få en Ember-cli app att köra embeddad</h1>
-    <p class="post-meta">Apr 27, 2015 • Johan Larsson</p>
+    <h1 class="post-title">Installera Drupal 7 mha Drush</h1>
+    <p class="post-meta">Aug 18, 2015 • Johan Larsson</p>
   </header>
 
   <article class="post-content">
-    <p>Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden.</p>
+    <p>Här hittar du några copy-paste-kommandon för att ladda ner och installera Drupal. Observera att du måste ha Drush installerad på din maskin. Du måste också såklart ha en MySql-tjänst (mariadb i mitt fall), PHP samt Apache (eller annan webserver).</p>
 
-<p>Lägg till detta i Brocfile.js</p>
+<p><strong>Ladda ner önskad version av Drupal</strong></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EmberApp</span><span class="p">({</span>
-	  <span class="nx">storeConfigInMeta</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	   <span class="nx">fingerprint</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">exclude</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">]</span>
-    	<span class="p">}</span>
-<span class="p">});</span></code></pre></div>
+<p>Om du inte anger någon version tar den senaste stabila version som finns tillgänglig. Skriv då bara <em>drush dl</em>.</p>
 
-<p>URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">drush</span> <span class="nx">dl</span> <span class="nx">drupal</span><span class="o">-</span><span class="mi">7</span><span class="p">.</span><span class="nx">x</span></code></pre></div>
 
-<p>Tillgängligt från ember-cli 0.1.2</p>
+<p><strong>Installera Drupal</strong></p>
+
+<p>Om du inte redan har skapat databasen så kommer Drush göra detta åt dig.</p>
+
+<p>Den första parametern är vilken installationsprofil du vill använda. Om du inte har någon egen rekomenderar jag <em>standard</em> men du kan också välja <em>minimal</em>.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">drush</span> <span class="nx">site</span><span class="o">-</span><span class="nx">install</span> <span class="nx">standard</span> <span class="o">--</span><span class="nx">account</span><span class="o">-</span><span class="nx">name</span><span class="o">=</span><span class="nx">admin</span> <span class="o">--</span><span class="nx">account</span><span class="o">-</span><span class="nx">pass</span><span class="o">=</span><span class="nx">admin</span> <span class="o">--</span><span class="nx">db</span><span class="o">-</span><span class="nx">url</span><span class="o">=</span><span class="nx">mysql</span><span class="o">:</span><span class="c1">//root:RandomPassword@localhost/databasename</span></code></pre></div>
+
 
   </article>
 
