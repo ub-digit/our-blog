@@ -6,9 +6,33 @@
 </description>
     <link>http://ub.gu.se/our-blog/</link>
     <atom:link href="http://ub.gu.se/our-blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Oct 2015 15:30:46 +0200</pubDate>
-    <lastBuildDate>Mon, 19 Oct 2015 15:30:46 +0200</lastBuildDate>
+    <pubDate>Mon, 19 Oct 2015 15:34:50 +0200</pubDate>
+    <lastBuildDate>Mon, 19 Oct 2015 15:34:50 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Ember-cli i18n i javascript-kod och språkhanterad dokumenttitel</title>
+        <description>&lt;p&gt;Stötte i grupprumsbokninge på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra följande:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;afterModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// update documenttitle &lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;utils:t&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;header.title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ett tips är att trots att du overridar med javascript ändå har titeln på svenska kvar i index.html då den syns ett par ögonblick då du byter språk.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 19 Oct 2015 15:23:00 +0200</pubDate>
+        <link>http://ub.gu.se/our-blog/ember-cli/i18n/2015/10/19/i18n-i-javascript-och-spraakhanterad-dok-title.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/i18n/2015/10/19/i18n-i-javascript-och-spraakhanterad-dok-title.html</guid>
+        
+        
+        <category>ember-cli</category>
+        
+        <category>i18n</category>
+        
+      </item>
     
       <item>
         <title>Ember-xselect istället för Ember.select</title>
@@ -334,53 +358,6 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
         <category>konfiguration</category>
         
         <category>javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>Hur man hostar en ember-cli applikation på Github Pages</title>
-        <description>&lt;p&gt;När du väljer att publicera dina sidor på &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; kommer url:n  att bli&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//yourusername.github.io/projectname&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Eftersom ember-cli som default utgår från att den kör i rooten på domänen måste man ändra detta. Det gör man genom config/environment.js.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;production&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;baseURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/projectname&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Publicera&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;När baseUrl nu är ändrad kan vi bygga applikationen och publicera den. Github Pages kräver att siten ligger i en branch som heter “gh-pages”. För att bygga, skapa den nya branchen och publicera siten kan man använda följande skript.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// publishToGithubPages.sh
-&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-git branch -D gh-pages
-git push origin --delete gh-pages
-git checkout -b gh-pages
-ember build --environment production
-git rm -rf app addon config tests
-git rm -rf Brocfile.js bower.json package.json testem.json
-git rm -rf .bowerrc .editorconfig .jshintrc .travis.yml
-mv dist/* .
-rm -rf dist
-git add .
-git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Publishing to github pages&amp;quot;&lt;/span&gt;
-git push origin gh-pages
-git checkout master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://xcv.no/2014/11/29/Deploying-ember-cli-apps-and-addons-to-github-pages.html&quot;&gt;Jag hittade informationen om detta här&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 25 Feb 2015 21:05:00 +0100</pubDate>
-        <link>http://ub.gu.se/our-blog/2015/02/25/hosting-ember-cli-apps-on-github-pages.html</link>
-        <guid isPermaLink="true">http://ub.gu.se/our-blog/2015/02/25/hosting-ember-cli-apps-on-github-pages.html</guid>
-        
-        <category>Ember-cli</category>
-        
-        <category>Github</category>
-        
-        <category>Github-pages</category>
-        
         
       </item>
     
