@@ -6,9 +6,34 @@
 </description>
     <link>http://ub.gu.se/our-blog/</link>
     <atom:link href="http://ub.gu.se/our-blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Oct 2015 15:34:50 +0200</pubDate>
-    <lastBuildDate>Mon, 19 Oct 2015 15:34:50 +0200</lastBuildDate>
+    <pubDate>Thu, 07 Jan 2016 10:52:00 +0100</pubDate>
+    <lastBuildDate>Thu, 07 Jan 2016 10:52:00 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Hur man restartar apache samt startar mariadb-demonen på OSX</title>
+        <description>&lt;p&gt;&lt;strong&gt;Starta mariadb som root:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;mysqld&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Restart apache&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apachectl&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// restarta servern&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 07 Jan 2016 10:00:00 +0100</pubDate>
+        <link>http://ub.gu.se/our-blog/kommandon/terminal/osx/2016/01/07/starta-apache-samt-mysql-kommandon.html</link>
+        <guid isPermaLink="true">http://ub.gu.se/our-blog/kommandon/terminal/osx/2016/01/07/starta-apache-samt-mysql-kommandon.html</guid>
+        
+        
+        <category>kommandon</category>
+        
+        <category>terminal</category>
+        
+        <category>osx</category>
+        
+      </item>
     
       <item>
         <title>Ember-cli i18n i javascript-kod och språkhanterad dokumenttitel</title>
@@ -328,36 +353,6 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
         <category>php</category>
         
         <category>homebrew</category>
-        
-      </item>
-    
-      <item>
-        <title>En liten &#39;setting&#39; för att få en Ember-cli app att köra embeddad</title>
-        <description>&lt;p&gt;Ember-cli sparar “by default” konfiguration in ett speciellt meta fält i dist/index.html. Om man inte använder sig av denna index.html fil utan istället embeddar applikationen på en annan websida tappar man detta. Man kan därför ändra på detta genom att istället spara denna konfigurationsdata i den kompilerade javascript-koden.&lt;/p&gt;
-
-&lt;p&gt;Lägg till detta i Brocfile.js&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;EmberApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-	  &lt;span class=&quot;nx&quot;&gt;storeConfigInMeta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	   &lt;span class=&quot;nx&quot;&gt;fingerprint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;css&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;URL:rna till filerna kan inte kan ‘fingerprintas’ därför exluderas dessa med hjälp av “exclude” ovan.&lt;/p&gt;
-
-&lt;p&gt;Tillgängligt från ember-cli 0.1.2&lt;/p&gt;
-</description>
-        <pubDate>Mon, 27 Apr 2015 20:05:00 +0200</pubDate>
-        <link>http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html</link>
-        <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/konfiguration/javascript/2015/04/27/embed-ember-cli-app.html</guid>
-        
-        
-        <category>ember-cli</category>
-        
-        <category>konfiguration</category>
-        
-        <category>javascript</category>
         
       </item>
     
