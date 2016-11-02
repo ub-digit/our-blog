@@ -145,7 +145,9 @@ Teamet består av cirka 10 st personer med varierande kompetens.
 				<strong>Torgny Rasmark</strong> | IT-utvecklare
 			</div>
 			<div class="employees-item-description-body">
-				 Databasexpert och föredrar backend före frontend. Har hus och flera katter. 
+				 Datalingvist. Föredrar att betrakta utvecklingsprocessen som narrativ snarare än artefakt. Fritidsmusiker, världsåskådare, formulärhaverist. 
+
+				 <br><br>Civilstånd:ja.
 			</div>
 			<div class="employees-item-description-footer">
 				<a href="mailto:torgny.rasmark@ub.gu.se">torgny.rasmark@ub.gu.se</a>
