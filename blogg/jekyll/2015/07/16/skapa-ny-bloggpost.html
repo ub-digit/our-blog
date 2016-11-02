@@ -80,20 +80,20 @@
 <h2 id="frsta-gngen">Första gången</h2>
 
 <h3 id="installera-jekylls-gem">Installera jekylls gem</h3>
-<p><code>
-gem install jekyll
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll
+</code></pre>
+</div>
 
 <h3 id="klona-repositoriet">Klona repositoriet</h3>
-<p><code>
-git clone git@github.com:ub-digit/our-blog.git
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone git@github.com:ub-digit/our-blog.git
+</code></pre>
+</div>
 
 <h3 id="kr-bloggen-lokalt">Kör bloggen lokalt</h3>
 
-<p><code>
-jekyll serve
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
+</code></pre>
+</div>
 
 <p>Kommandot startar bloggen lokalt på http://localhost:4000/our-blog/ , sparade ändringar i poster visas efter refresh.</p>
 
@@ -102,11 +102,11 @@ jekyll serve
 <h2 id="skapa-en-post">Skapa en post</h2>
 
 <h3 id="kopiera-exempelpost">Kopiera exempelpost</h3>
-<p>En färdig exempelpost finns skapad som <code>_posts/exempelpost</code></p>
+<p>En färdig exempelpost finns skapad som <code class="highlighter-rouge">_posts/exempelpost</code></p>
 
-<p><code>
-cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
+</code></pre>
+</div>
 
 <h3 id="byt-ut-postspecifk-data-i-filens-inledning">Byt ut postspecifk data i filens inledning:</h3>
 
@@ -124,7 +124,7 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
 <p>Commita samtliga ändringar till master och pusha.</p>
 
 <h3 id="deploya-ny-blogg">Deploya ny blogg</h3>
-<p>För att bloggen ska uppdateras, kör kommandot <code>make deploy</code></p>
+<p>För att bloggen ska uppdateras, kör kommandot <code class="highlighter-rouge">make deploy</code></p>
 
 <p>Makeskriptet genererar då om bloggen i sin helhet och sparar statiska filer i _site/ mappen.</p>
 

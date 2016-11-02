@@ -6,20 +6,20 @@
 </description>
     <link>http://ub.gu.se/our-blog/</link>
     <atom:link href="http://ub.gu.se/our-blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Jan 2016 10:52:00 +0100</pubDate>
-    <lastBuildDate>Thu, 07 Jan 2016 10:52:00 +0100</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Wed, 02 Nov 2016 10:24:28 +0100</pubDate>
+    <lastBuildDate>Wed, 02 Nov 2016 10:24:28 +0100</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Hur man restartar apache samt startar mariadb-demonen på OSX</title>
         <description>&lt;p&gt;&lt;strong&gt;Starta mariadb som root:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;mysqld&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;mysql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;mysqld&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Restart apache&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apachectl&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// restarta servern&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apachectl&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// restarta servern&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Thu, 07 Jan 2016 10:00:00 +0100</pubDate>
@@ -37,58 +37,60 @@
     
       <item>
         <title>Ember-cli i18n i javascript-kod och språkhanterad dokumenttitel</title>
-        <description>&lt;p&gt;Stötte i grupprumsbokninge på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra följande:&lt;/p&gt;
+        <description>&lt;p&gt;Stötte i grupprumsbokningen på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra följande:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;afterModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;// update documenttitle &lt;/span&gt;
-		&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;utils:t&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;header.title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;	&lt;span class=&quot;nx&quot;&gt;afterModel&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// update documenttitle&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'utils:t'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'header.title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Ett tips är att trots att du overridar med javascript ändå har titeln på svenska kvar i index.html då den syns ett par ögonblick då du byter språk.&lt;/p&gt;
-
 </description>
         <pubDate>Mon, 19 Oct 2015 15:23:00 +0200</pubDate>
         <link>http://ub.gu.se/our-blog/ember-cli/i18n/2015/10/19/i18n-i-javascript-och-spraakhanterad-dok-title.html</link>
         <guid isPermaLink="true">http://ub.gu.se/our-blog/ember-cli/i18n/2015/10/19/i18n-i-javascript-och-spraakhanterad-dok-title.html</guid>
         
         
-        <category>ember-cli</category>
+        <category>Ember-cli</category>
         
-        <category>i18n</category>
+        <category>I18N</category>
         
       </item>
     
       <item>
         <title>Ember-xselect istället för Ember.select</title>
-        <description>&lt;p&gt;Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers &lt;strong&gt;‘Ember.select’&lt;/strong&gt; och &lt;strong&gt;‘view ‘select’‘&lt;/strong&gt;, så bör dessa bytas ut mot antingen en ren &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; tag mha HTMLBars, eller via ett add-on.&lt;/p&gt;
+        <description>&lt;p&gt;Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers &lt;strong&gt;‘Ember.select’&lt;/strong&gt; och &lt;strong&gt;‘view ‘select’‘&lt;/strong&gt;, så bör dessa bytas ut mot antingen en ren &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;select&amp;gt;&lt;/code&gt; tag mha HTMLBars, eller via ett add-on.&lt;/p&gt;
 
 &lt;p&gt;Jag har testat &lt;strong&gt;emberx-select&lt;/strong&gt;, vilket är ett populärt addon som verkar fungera bra.&lt;/p&gt;
 
 &lt;p&gt;För att installera:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ember install emberx-select
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ember install emberx-select
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Kod innan byte:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{{view Ember.Select 
-  content=pubyears  
-  optionValuePath=&quot;content.id&quot;
-  optionLabelPath=&quot;content.pubyear&quot;
-  value=pubyear
-  class=&quot;form-control&quot;
-}}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{view&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Ember.Select&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;content=pubyears&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;optionValuePath=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;content.id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;optionLabelPath=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;content.pubyear&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;value=pubyear&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;form-control&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Kod efter byte&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{{#x-select value=pubyear class=&quot;form-control&quot;}}
-  {{#each pubyears as |selectValue|}}
-    {{#x-option value=selectValue.id}}{{selectValue.pubyear}}{{/x-option}}
-  {{/each}}
-{{/x-select}}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{#x-select&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;value=pubyear&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;form-control&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{#each&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;pubyears&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|selectValue|&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{#x-option&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;value=selectValue.id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{selectValue.pubyear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{/x-option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{/each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{/x-select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Länk till repositoriet: &lt;a href=&quot;https://github.com/thefrontside/emberx-select&quot;&gt;https://github.com/thefrontside/emberx-select&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -97,9 +99,9 @@
         <guid isPermaLink="true">http://ub.gu.se/our-blog/ember/select/2015/10/07/ember-xselect.html</guid>
         
         
-        <category>ember</category>
+        <category>Ember</category>
         
-        <category>select</category>
+        <category>Select</category>
         
       </item>
     
@@ -118,7 +120,7 @@
         <guid isPermaLink="true">http://ub.gu.se/our-blog/setup/osx/mac/2015/09/13/installera-en-ny-mac.html</guid>
         
         
-        <category>setup</category>
+        <category>Setup</category>
         
         <category>osx</category>
         
@@ -134,7 +136,7 @@
 
 &lt;p&gt;1) Välj rätt databas i mysql och kör:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;like&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;ctools_plugin%&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;	&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;like&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ctools_plugin%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;2) Ta bort allt onödigt i layoutväg.
 3) F5&lt;/p&gt;
@@ -147,7 +149,7 @@
         <guid isPermaLink="true">http://ub.gu.se/our-blog/drupal/2015/08/19/ta-bort-layouter-i-drupal-genererar-fel.html</guid>
         
         
-        <category>drupal</category>
+        <category>Drupal</category>
         
       </item>
     
@@ -159,7 +161,7 @@
 
 &lt;p&gt;Om du inte anger någon version tar den senaste stabila version som finns tillgänglig. Skriv då bara &lt;em&gt;drush dl&lt;/em&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;drush&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;drupal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;drush&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;drupal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Installera Drupal&lt;/strong&gt;&lt;/p&gt;
 
@@ -167,7 +169,7 @@
 
 &lt;p&gt;Den första parametern är vilken installationsprofil du vill använda. Om du inte har någon egen rekomenderar jag &lt;em&gt;standard&lt;/em&gt; men du kan också välja &lt;em&gt;minimal&lt;/em&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;drush&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;standard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//root:RandomPassword@localhost/databasename&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;drush&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;standard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//root:RandomPassword@localhost/databasename&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Tue, 18 Aug 2015 09:00:00 +0200</pubDate>
@@ -175,7 +177,7 @@
         <guid isPermaLink="true">http://ub.gu.se/our-blog/drupal/2015/08/18/install-drupal7-with-drush.html</guid>
         
         
-        <category>drupal</category>
+        <category>Drupal</category>
         
       </item>
     
@@ -184,38 +186,38 @@
         <description>&lt;p&gt;Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.&lt;/p&gt;
 
 &lt;h2 id=&quot;skapa-en-task&quot;&gt;Skapa en task&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;
-rails generate task &amp;lt;namespace&amp;gt; &amp;lt;task1&amp;gt; &amp;lt;task2&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails generate task &amp;lt;namespace&amp;gt; &amp;lt;task1&amp;gt; &amp;lt;task2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Exempel&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-rails generate task libris_info neg_responses user_requests
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rails generate task libris_info neg_responses user_requests
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Följande fil skapas: 
-&lt;code&gt;
-lib/tasks/libris_info.rake
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Följande fil skapas:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lib/tasks/libris_info.rake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:libris_info&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;beskrivning av libris_info task&amp;quot;&lt;/span&gt;  
-  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;neg_responses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:environment&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:libris_info&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;beskrivning av libris_info task&quot;&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;neg_responses: :environment&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;## Skriv kod&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;beskrivning av user_requests task&amp;quot;&lt;/span&gt;  
-  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;user_requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:environment&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;beskrivning av user_requests task&quot;&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;user_requests: :environment&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;## Skriv kod&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;En task anropas sedan via t.ex.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 </description>
         <pubDate>Wed, 29 Jul 2015 17:40:00 +0200</pubDate>
@@ -223,15 +225,15 @@ RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_i
         <guid isPermaLink="true">http://ub.gu.se/our-blog/rails/rake/task/skript/crontab/2015/07/29/rake-task.html</guid>
         
         
-        <category>rails</category>
+        <category>Rails</category>
         
-        <category>rake</category>
+        <category>Rake</category>
         
-        <category>task</category>
+        <category>Task</category>
         
-        <category>skript</category>
+        <category>Skript</category>
         
-        <category>crontab</category>
+        <category>Crontab</category>
         
       </item>
     
@@ -247,9 +249,9 @@ RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_i
         <guid isPermaLink="true">http://ub.gu.se/our-blog/drush/drupal/2015/07/28/cheats-for-drush.html</guid>
         
         
-        <category>drush</category>
+        <category>Drush</category>
         
-        <category>drupal</category>
+        <category>Drupal</category>
         
       </item>
     
@@ -262,20 +264,20 @@ RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_i
 &lt;h2 id=&quot;frsta-gngen&quot;&gt;Första gången&lt;/h2&gt;
 
 &lt;h3 id=&quot;installera-jekylls-gem&quot;&gt;Installera jekylls gem&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;
-gem install jekyll
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;klona-repositoriet&quot;&gt;Klona repositoriet&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;
-git clone git@github.com:ub-digit/our-blog.git
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git@github.com:ub-digit/our-blog.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;kr-bloggen-lokalt&quot;&gt;Kör bloggen lokalt&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;
-jekyll serve
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Kommandot startar bloggen lokalt på http://localhost:4000/our-blog/ , sparade ändringar i poster visas efter refresh.&lt;/p&gt;
 
@@ -284,11 +286,11 @@ jekyll serve
 &lt;h2 id=&quot;skapa-en-post&quot;&gt;Skapa en post&lt;/h2&gt;
 
 &lt;h3 id=&quot;kopiera-exempelpost&quot;&gt;Kopiera exempelpost&lt;/h3&gt;
-&lt;p&gt;En färdig exempelpost finns skapad som &lt;code&gt;_posts/exempelpost&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En färdig exempelpost finns skapad som &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/exempelpost&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;byt-ut-postspecifk-data-i-filens-inledning&quot;&gt;Byt ut postspecifk data i filens inledning:&lt;/h3&gt;
 
@@ -306,7 +308,7 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
 &lt;p&gt;Commita samtliga ändringar till master och pusha.&lt;/p&gt;
 
 &lt;h3 id=&quot;deploya-ny-blogg&quot;&gt;Deploya ny blogg&lt;/h3&gt;
-&lt;p&gt;För att bloggen ska uppdateras, kör kommandot &lt;code&gt;make deploy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;För att bloggen ska uppdateras, kör kommandot &lt;code class=&quot;highlighter-rouge&quot;&gt;make deploy&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Makeskriptet genererar då om bloggen i sin helhet och sparar statiska filer i _site/ mappen.&lt;/p&gt;
 
@@ -326,14 +328,14 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
         <guid isPermaLink="true">http://ub.gu.se/our-blog/blogg/jekyll/2015/07/16/skapa-ny-bloggpost.html</guid>
         
         
-        <category>blogg</category>
+        <category>Blogg</category>
         
-        <category>jekyll</category>
+        <category>Jekyll</category>
         
       </item>
     
       <item>
-        <title>En bra &#39;walkthrough&#39; för att installera en lokal utvecklarmiljö med Apache, MySQL, PHP, och virtual hosts på Mac (Yosemite)</title>
+        <title>En bra 'walkthrough' för att installera en lokal utvecklarmiljö med Apache, MySQL, PHP, och virtual hosts på Mac (Yosemite)</title>
         <description>&lt;p&gt;Ett av dom stora problemen jag stött på just när man använder virtual hosts är att man inte kan testa på externa enheter som iPhones, iPads etc. I artikeln nedan löses detta genom ett verktyg som heter &lt;a href=&quot;http://www.thekelleys.org.uk/dnsmasq/doc.html&quot;&gt;som heter dnsmasq&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Du hittar den &lt;a href=&quot;https://medium.com/@raureif/os-x-yosemite-how-to-set-up-apache-mysql-and-php-with-homebrew-4bc236d7d9fa&quot;&gt;här&lt;/a&gt;.&lt;/p&gt;
@@ -346,13 +348,13 @@ cp _posts/exempelpost _posts/2001-01-01-kort-bloggpost-titel.markdown
         <guid isPermaLink="true">http://ub.gu.se/our-blog/apache/mysql/php/homebrew/2015/07/16/installera-apache-mysql-php-virtual-hosts-maxosx.html</guid>
         
         
-        <category>apache</category>
+        <category>Apache</category>
         
-        <category>mysql</category>
+        <category>MySql</category>
         
-        <category>php</category>
+        <category>PHP</category>
         
-        <category>homebrew</category>
+        <category>Homebrew</category>
         
       </item>
     

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ember-cli i18n i javascript-kod och språkhanterad dokumenttitel</title>
-  <meta name="description" content="Stötte i grupprumsbokninge på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra ...">
+  <meta name="description" content="Stötte i grupprumsbokningen på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra...">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
@@ -73,16 +73,15 @@
   </header>
 
   <article class="post-content">
-    <p>Stötte i grupprumsbokninge på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra följande:</p>
+    <p>Stötte i grupprumsbokningen på problemet med att dokumenttiteln skulle översättas. Löste detta genom att på application-controllern på afterModel-hooken göra följande:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">afterModel</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-		<span class="c1">// update documenttitle </span>
-		<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">lookup</span><span class="p">(</span><span class="s1">&#39;utils:t&#39;</span><span class="p">);</span>
-		<span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">t</span><span class="p">(</span><span class="s1">&#39;header.title&#39;</span><span class="p">);</span> 
-	<span class="p">},</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">	<span class="nx">afterModel</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="c1">// update documenttitle</span>
+		<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">lookup</span><span class="p">(</span><span class="s1">'utils:t'</span><span class="p">);</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">t</span><span class="p">(</span><span class="s1">'header.title'</span><span class="p">);</span>
+	<span class="p">},</span></code></pre></figure>
 
 <p>Ett tips är att trots att du overridar med javascript ändå har titeln på svenska kvar i index.html då den syns ett par ögonblick då du byter språk.</p>
-
 
   </article>
 

@@ -76,38 +76,38 @@
     <p>Om man vill komma åt sin Rails-app från ett externt skript, cronjob etc så är rake taks en lämplig lösning.</p>
 
 <h2 id="skapa-en-task">Skapa en task</h2>
-<p><code>
-rails generate task &lt;namespace&gt; &lt;task1&gt; &lt;task2&gt;
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>rails generate task &lt;namespace&gt; &lt;task1&gt; &lt;task2&gt;
+</code></pre>
+</div>
 
 <p>Exempel</p>
 
-<p><code>
-rails generate task libris_info neg_responses user_requests
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>rails generate task libris_info neg_responses user_requests
+</code></pre>
+</div>
 
-<p>Följande fil skapas: 
-<code>
-lib/tasks/libris_info.rake
-</code></p>
+<p>Följande fil skapas:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>lib/tasks/libris_info.rake
+</code></pre>
+</div>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">namespace</span> <span class="ss">:libris_info</span> <span class="k">do</span>
-  <span class="n">desc</span> <span class="s2">&quot;beskrivning av libris_info task&quot;</span>  
-  <span class="n">task</span> <span class="ss">neg_responses</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">namespace</span> <span class="ss">:libris_info</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">"beskrivning av libris_info task"</span>  
+  <span class="n">task</span> <span class="ss">neg_responses: :environment</span> <span class="k">do</span>
     <span class="c1">## Skriv kod</span>
   <span class="k">end</span>
 
-  <span class="n">desc</span> <span class="s2">&quot;beskrivning av user_requests task&quot;</span>  
-  <span class="n">task</span> <span class="ss">user_requests</span><span class="p">:</span> <span class="ss">:environment</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">"beskrivning av user_requests task"</span>  
+  <span class="n">task</span> <span class="ss">user_requests: :environment</span> <span class="k">do</span>
     <span class="c1">## Skriv kod</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>En task anropas sedan via t.ex.</p>
 
-<p><code>
-RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>RAILS_ENV=production /usr/local/rvm/gems/ruby-2.1.1@illbe/wrappers/rake libris_info:neg_responses
+</code></pre>
+</div>
 
 
   </article>

@@ -73,34 +73,37 @@
   </header>
 
   <article class="post-content">
-    <p>Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers <strong>‘Ember.select’</strong> och <strong>‘view ‘select’‘</strong>, så bör dessa bytas ut mot antingen en ren <code>&lt;select&gt;</code> tag mha HTMLBars, eller via ett add-on.</p>
+    <p>Då Ember iom version 2.0 ej kommer att ha kvar stöd för de tidigare selecthelpers <strong>‘Ember.select’</strong> och <strong>‘view ‘select’‘</strong>, så bör dessa bytas ut mot antingen en ren <code class="highlighter-rouge">&lt;select&gt;</code> tag mha HTMLBars, eller via ett add-on.</p>
 
 <p>Jag har testat <strong>emberx-select</strong>, vilket är ett populärt addon som verkar fungera bra.</p>
 
 <p>För att installera:</p>
 
-<pre><code>ember install emberx-select
+<div class="highlighter-rouge"><pre class="highlight"><code>ember install emberx-select
 </code></pre>
+</div>
 
 <p>Kod innan byte:</p>
 
-<pre><code>{{view Ember.Select 
-  content=pubyears  
-  optionValuePath="content.id"
-  optionLabelPath="content.pubyear"
-  value=pubyear
-  class="form-control"
-}}
-</code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">{view</span><span class="w"> </span><span class="err">Ember.Select</span><span class="w"> 
+  </span><span class="err">content=pubyears</span><span class="w">  
+  </span><span class="err">optionValuePath=</span><span class="nt">"content.id"</span><span class="w">
+  </span><span class="err">optionLabelPath=</span><span class="nt">"content.pubyear"</span><span class="w">
+  </span><span class="err">value=pubyear</span><span class="w">
+  </span><span class="err">class=</span><span class="nt">"form-control"</span><span class="w">
+</span><span class="err">}}</span><span class="w">
+</span></code></pre>
+</div>
 
 <p>Kod efter byte</p>
 
-<pre><code>{{#x-select value=pubyear class="form-control"}}
-  {{#each pubyears as |selectValue|}}
-    {{#x-option value=selectValue.id}}{{selectValue.pubyear}}{{/x-option}}
-  {{/each}}
-{{/x-select}}
-</code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">{#x-select</span><span class="w"> </span><span class="err">value=pubyear</span><span class="w"> </span><span class="err">class=</span><span class="nt">"form-control"</span><span class="err">}}</span><span class="w">
+  </span><span class="p">{</span><span class="err">{#each</span><span class="w"> </span><span class="err">pubyears</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">|selectValue|</span><span class="p">}</span><span class="err">}</span><span class="w">
+    </span><span class="p">{</span><span class="err">{#x-option</span><span class="w"> </span><span class="err">value=selectValue.id</span><span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{selectValue.pubyear</span><span class="p">}</span><span class="err">}</span><span class="p">{</span><span class="err">{/x-option</span><span class="p">}</span><span class="err">}</span><span class="w">
+  </span><span class="p">{</span><span class="err">{/each</span><span class="p">}</span><span class="err">}</span><span class="w">
+</span><span class="p">{</span><span class="err">{/x-select</span><span class="p">}</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
 
 <p>Länk till repositoriet: <a href="https://github.com/thefrontside/emberx-select">https://github.com/thefrontside/emberx-select</a></p>
 

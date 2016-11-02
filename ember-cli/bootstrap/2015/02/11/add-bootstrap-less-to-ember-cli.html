@@ -77,11 +77,11 @@
 
 <p><strong>Steg 1 - installera ember-cli-less</strong></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">ember</span><span class="o">-</span><span class="nx">cli</span><span class="o">-</span><span class="nx">less</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">ember</span><span class="o">-</span><span class="nx">cli</span><span class="o">-</span><span class="nx">less</span></code></pre></figure>
 
 <p><strong>Steg 2 - installera bootstrap med bower</strong></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bower</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>  <span class="nx">bootstrap</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bower</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>  <span class="nx">bootstrap</span></code></pre></figure>
 
 <p>Du kommer nu ha en katalog som heter bootstrap i bower_components. I den folder hittar du hela bootstrappakektet. Det som är intressant just nu är såklart less-katalogen.</p>
 
@@ -91,7 +91,7 @@
 
 <p>Sedan lägger jag dit följande rad</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="kr">import</span> <span class="s2">&quot;bower_components/bootstrap/less/bootstrap.less&quot;</span><span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="kr">import</span> <span class="s2">"bower_components/bootstrap/less/bootstrap.less"</span><span class="p">;</span></code></pre></figure>
 
 <p>Detta gör nu att bootstrap finns inlänkat i ditt projekt. Du kan sen skapa egna .less filer och länka in i denna filen. Det gör du direkt i styles-katalogen. Jag brukar alltid börja med header.less, footer.less och sen ser man vart man hamlar allt eftersom.</p>
 

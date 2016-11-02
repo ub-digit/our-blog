@@ -81,12 +81,13 @@
 
 <h2 id="installera">1: Installera</h2>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">liquid</span><span class="o">-</span><span class="nx">fire</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">	<span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">liquid</span><span class="o">-</span><span class="nx">fire</span></code></pre></figure>
 
 <h2 id="skapa-en-ny-outlet-som-skall-animeras">2: Skapa en ny outlet som skall animeras</h2>
 
-<pre><code>{{liquid-outlet}}
-</code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">{liquid-outlet</span><span class="p">}</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
 
 <h2 id="skapa-en-transition-map">3: Skapa en Transition Map</h2>
 
@@ -94,14 +95,14 @@
 
 <p>Eftersom animationerna kan variera baserat på vilken rutt man går från och till så kan man här ange “fromRoute” och “toRoute”. Baserat på det kan man då välja animationstyp. T ex om man går djupare ner i en struktur vill man animera från höger till vänster men när man går tillbaka vill man oftast göra det omvända.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(){</span>
 	<span class="k">this</span><span class="p">.</span><span class="nx">transition</span><span class="p">(</span>
-	  <span class="k">this</span><span class="p">.</span><span class="nx">fromRoute</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span>
-	  <span class="k">this</span><span class="p">.</span><span class="nx">toRoute</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">),</span>
-	  <span class="k">this</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;toLeft&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">duration</span><span class="o">:</span> <span class="mi">300</span><span class="p">}),</span>
-	  <span class="k">this</span><span class="p">.</span><span class="nx">reverse</span><span class="p">(</span><span class="s1">&#39;toRight&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">duration</span><span class="o">:</span> <span class="mi">300</span><span class="p">})</span>
+	  <span class="k">this</span><span class="p">.</span><span class="nx">fromRoute</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">),</span>
+	  <span class="k">this</span><span class="p">.</span><span class="nx">toRoute</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">),</span>
+	  <span class="k">this</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'toLeft'</span><span class="p">,</span> <span class="p">{</span><span class="na">duration</span><span class="p">:</span> <span class="mi">300</span><span class="p">}),</span>
+	  <span class="k">this</span><span class="p">.</span><span class="nx">reverse</span><span class="p">(</span><span class="s1">'toRight'</span><span class="p">,</span> <span class="p">{</span><span class="na">duration</span><span class="p">:</span> <span class="mi">300</span><span class="p">})</span>
 	<span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Full dokumentation för <a href="http://ef4.github.io/liquid-fire/">liquid-fire</a>.</p>
 
